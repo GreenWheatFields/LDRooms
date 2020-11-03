@@ -15,10 +15,11 @@ class CreateRoom {
         return "room created"
     }
     fun generateId(): String {
-        val characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV0123456789".toCharArray()
+        //abcdefghijklmnopqrstuvwxyz
+        val characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray()
         val builder = StringBuilder()
         for (temp in 0..8){
-            builder.append(characters[Random.nextInt(62)])
+            builder.append(characters[Random.nextInt(characters.size)])
         }
         return builder.toString()
     }
