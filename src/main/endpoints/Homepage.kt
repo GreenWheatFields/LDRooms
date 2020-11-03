@@ -1,11 +1,15 @@
 package main.endpoints
 
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RestController
+import javax.servlet.http.HttpServletRequest
 
-@RequestMapping
+@RestController
 class Homepage {
-    fun home(): String{
-        print("home!")
+    @RequestMapping("/")
+    fun home(request:HttpServletRequest): String{
+        print(request.remoteAddr)
+        print("home")
         return "welcome home!"
     }
 }
