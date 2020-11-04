@@ -10,9 +10,9 @@ class CreateRoom {
     // todo, create database entry, todo later: authenticate requests
     @RequestMapping("/rooms/create{id}")
     @ResponseBody
-    fun createRoom(@RequestParam(value = "id") id: String, request: HttpServletRequest): String {
-        if (id.isEmpty()) println("empty id") else println(id)
-        println(request.getParameter("id"))
+    fun createRoom(@RequestParam(value = "id", required = true) id: String): String {
+        println("id: $id")
+
         return "room created"
     }
     fun generateId(): String {
