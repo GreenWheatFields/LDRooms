@@ -6,7 +6,7 @@ import kotlin.test.assertEquals
 import kotlin.test.fail
 
 
-class GeneralTests {
+class TestGeneral {
 
     @Test
     fun testUniqueIds() {
