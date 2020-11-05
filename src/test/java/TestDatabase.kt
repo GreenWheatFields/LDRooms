@@ -7,6 +7,6 @@ class Sandbox {
     @Test
     fun testDb() {
         //todo, add postgre dependancy to maven
-        val driverManager = DriverManager.getConnection("jdbc:postgresql://localhost:5432/RoomsForLDRooms")
+        val driverManager = DriverManager.getConnection("jdbc:postgresql://localhost:5432/?user=${System.getenv("username")}&password=${System.getenv("password")}/")
     }
 }
