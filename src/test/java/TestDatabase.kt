@@ -1,12 +1,26 @@
 package test.java
 
+import org.junit.BeforeClass
 import java.sql.*
 import org.junit.Test
+import kotlin.test.assertEquals
+
 //testing database connections
-class Sandbox {
-    @Test
-    fun testDb() {
-        //todo, add postgre dependancy to maven
-        val driverManager = DriverManager.getConnection("jdbc:postgresql://localhost:5432/?user=${System.getenv("username")}&password=${System.getenv("password")}/")
+class TestDatabase {
+    companion object{
+        lateinit var driverManager: Connection
+        lateinit var statement: Statement
+        @BeforeClass @JvmStatic
+        fun connectToDB(){
+            //todo, can't rename server
+            driverManager = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres")
+            statement = driverManager.createStatement()
+        }
     }
+    @Test
+    fun testInsert(){
+
+    }
+
+
 }
