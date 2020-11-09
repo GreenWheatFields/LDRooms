@@ -16,6 +16,7 @@ class CreateRoom {
         return "room created"
     }
     fun generateId(): String {
+        //todo, companion object?
         val characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray()
         val builder = StringBuilder()
         for (temp in 0..8){
