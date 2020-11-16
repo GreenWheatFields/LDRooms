@@ -18,10 +18,10 @@ class TestDatabase {
     }
     @Test
     fun testInsert(){
-        val id = CreateRoom().generateId()
-        val statement = databaseConn.prepareStatement("INSERT INTO rooms (id , user1, user2, user1lastlocation, user2lastlocation) VALUES (?,?,?,?,?)")
-        statement.setString(1, id).also { statement.setString(2, "userName") }
-        statement.executeUpdate()
+//        val id = CreateRoom().generateId()
+//        val statement = databaseConn.prepareStatement("INSERT INTO rooms (id , user1, user2, user1lastlocation, user2lastlocation) VALUES (?,?,?,?,?)")
+//        statement.setString(1, id).also { statement.setString(2, "userName") }
+//        statement.executeUpdate()
 
     }
 
